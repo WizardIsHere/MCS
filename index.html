@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coinvest Africa</title>
+
+    <!-- Link to jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="/style.css" type="text/css" media="screen" />
+
+    <!-- Link to Bootstrap CSS and JavaScript CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/script.js"></script>
+
+    <!-- Link to FontAwesome CDN for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body id="content">
+    <!-- Your HTML content goes here -->
+
+    <!-- Navbar Section -->
+    <section>
+      <div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+          <div class="container-fluid">
+            <!-- Logo on the left -->
+            <a class="navbar-brand" href="#">
+              <img src="/assets/coinsure.png" alt="Logo" />
+            </a>
+
+            <!-- Search in the center -->
+            <div
+              class="d-flex justify-content-between align-items-center clip"
+              style="
+                flex-grow: 1;
+                background-color: #252525;
+                padding: 2rem 5rem;
+              "
+            >
+              <div
+                class="searchContainer d-flex justify-content-center align-items-center"
+              >
+                <div class="InputContainer">
+                  <input
+                    type="text"
+                    name="text"
+                    class="input"
+                    id="searchInput"
+                    placeholder="Search"
+                  />
+
+                  <label for="input" class="labelforsearch">
+                    <svg
+                      viewBox="0 0 512 512"
+                      class="searchIcon"
+                      id="searchIcon"
+                    >
+                      <path
+                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                      ></path>
+                    </svg>
+                  </label>
+                  <div class="border"></div>
+                </div>
+              </div>
+
+              <!-- Navbar Toggle Button (Responsive) -->
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <!-- Menus on the right -->
+              <div class="d-flex ml-4">
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-5">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link text-light"
+                        aria-current="page"
+                        href="#"
+                        ><i class="fas fa-custom-size fa-envelope"></i
+                      ></a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link text-light"
+                        aria-current="page"
+                        href="#"
+                        ><i class="fas fa-custom-size fa-bell"></i
+                      ></a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link text-light"
+                        aria-current="page"
+                        href="#"
+                        ><i class="fas fa-custom-size fa-pencil-alt"></i
+                      ></a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link text-light"
+                        aria-current="page"
+                        href="#"
+                        ><i class="fas fa-custom-size fa-user"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div><img src="/assets/banner.jpg" width="100%" height="500px" /></div>
+
+      <div>
+        <img
+          src="assets/banner.jpg"
+          height="300px"
+          width="300px"
+          style="
+            border-radius: 50%;
+            position: absolute;
+            top: 40rem;
+            left: 15rem;
+          "
+        />
+      </div>
+
+      <div>
+        <div class="d-md-flex" style="height: 90px; background-color: #3b3b3b">
+          <div class="col-md-4"></div>
+          <div class="col-md-7">
+            <ul
+              class="d-flex text-light mt-4 form-control-lg justify-content-between align-items-center list-unstyled"
+            >
+              <li>Profile</li>
+              <li>Friends</li>
+              <li>Album</li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-md-flex" style="height: 90px; background-color: #f9bc16">
+          <div class="col-md-4"></div>
+          <div class="col-md-8">
+            <h1 class="pt-4">Kgotso Matlhabe</h1>
+          </div>
+        </div>
+        <div class="d-md-flex" style="height: 122px; background-color: #252525">
+          <div class="col-md-4"></div>
+          <div class="col-md-7">
+            <ul
+              class="d-flex text-light form-control-lg justify-content-between align-items-center list-unstyled"
+            >
+              <li>Profile View<br /><span class="hero-font">41</span></li>
+              <li>Profile<br /><span class="hero-font">50</span></li>
+              <li>Status<br /><span class="hero-font">Online</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="other_content">
+      <div class="contaisner">
+        <div class="row">
+          <div class="col-md-4 order-sm-1 order-2">
+            <div
+              class="m-5 text-light pt-4"
+              style="height: 5rem; background-color: #3b3b3b"
+            >
+              <h3 class="text-center">Lives in Midrand, Gauteng</h3>
+            </div>
+            <div
+              class="m-5 text-light pt-4"
+              style="height: 5rem; background-color: #3b3b3b"
+            >
+              <h3 class="text-center">From Tembisa, Gauteng</h3>
+            </div>
+            <div
+              class="m-5 text-light pt-4"
+              style="height: 5rem; background-color: #3b3b3b"
+            >
+              <h2 class="text-center">Info</h2>
+              <div
+                class="p-4"
+                style="background-color: #949393; border-radius: 0 0 0 55px"
+              >
+                <span style="font-size: 22px"
+                  >Web, Game & App Developer | Server Technician | Founder of
+                  @bongodigitalagency & @onerhosting</span
+                >
+              </div>
+              <div
+                class="mt-4 text-light pt-4"
+                style="height: 5rem; background-color: #3b3b3b"
+              >
+                <h3 class="text-center">About</h3>
+                <div
+                  class="p-4"
+                  style="background-color: #949393; border-radius: 0 0 0 55px"
+                >
+                  <span style="font-size: 12px; padding: 0"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusantium molestiae quod omnis earum ad fugit maxime,
+                    delectus tempore dolores corrupti veniam! Placeat libero
+                    suscipit eum vero sint, amet quos qui possimus, harum
+                    molestiae alias? Quia dolore necessitatibus placeat nemo
+                    facilis, pariatur mollitia inventore animi consequatur
+                    delectus molestias tempora debitis neque quo ipsum suscipit
+                    assumenda hic optio, repudiandae deserunt. Voluptatum saepe
+                    repellendus fugiat ipsum non, perferendis illum accusantium,
+                    voluptas enim at ad labore velit, quo vero quasi blanditiis
+                    amet ratione pariatur atque ut hic. Et, veritatis odit.
+                    Aliquam facere quod nihil obcaecati id dolores numquam quasi
+                    eos quae, accusamus ratione voluptate? Hic, corporis
+                    excepturi accusantium tempora similique, at amet unde
+                    corrupti reprehenderit ab fuga, et quas dignissimos eius
+                    reiciendis aut quae. Corrupti ipsa tempora veniam, debitis
+                    eveniet iure eligendi, ullam blanditiis aperiam consequatur
+                    voluptates eum culpa! Praesentium, blanditiis. Minus illo
+                    fuga veniam aspernatur neque aut veritatis officiis dolore,
+                    harum vitae culpa.</span
+                  >
+                </div>
+                <div
+                  class="mt-4 text-light pt-4"
+                  style="height: 5rem; background-color: #3b3b3b"
+                >
+                  <h3 class="text-center">Images</h3>
+                  <div
+                    class="p-4"
+                    style="
+                      background-color: #949393;
+                      border-radius: 0 0 0 55px;
+                      height: 35rem;
+                    "
+                  ></div>
+                  <div
+                    class="mt-4 text-light pt-4"
+                    style="height: 5rem; background-color: #3b3b3b"
+                  >
+                    <h3 class="text-center">Friends</h3>
+                    <div
+                      class="p-4 d-flex flex-column gap-4"
+                      style="
+                        background-color: #949393;
+                        border-radius: 0 0 0 55px;
+                        height: 80rem;
+                      "
+                    >
+                      <div class="d-flex">
+                        <div class="col-md-3">
+                          <img
+                            src="/assets/banner.jpg"
+                            height="125rem"
+                            width="125rem"
+                            style="border-radius: 35%"
+                          />
+                        </div>
+                        <div class="p-2 mx-4">
+                          <h4>Sazokuhle Mlipha</h4>
+                          <span>Graphic Designing Student</span>
+                          <button
+                            class="btn text-light w-100"
+                            style="background-color: #53b8bb"
+                          >
+                            Add Friends
+                          </button>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <div class="col-md-3">
+                          <img
+                            src="/assets/banner.jpg"
+                            height="125rem"
+                            width="125rem"
+                            style="border-radius: 35%"
+                          />
+                        </div>
+                        <div class="p-2 mx-4">
+                          <h4>Sazokuhle Mlipha</h4>
+                          <span>Graphic Designing Student</span>
+                          <button
+                            class="btn text-light w-100"
+                            style="background-color: #53b8bb"
+                          >
+                            Add Friends
+                          </button>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <div class="col-md-3">
+                          <img
+                            src="/assets/banner.jpg"
+                            height="125rem"
+                            width="125rem"
+                            style="border-radius: 35%"
+                          />
+                        </div>
+                        <div class="p-2 mx-4">
+                          <h4>Sazokuhle Mlipha</h4>
+                          <span>Graphic Designing Student</span>
+                          <button
+                            class="btn text-light w-100"
+                            style="background-color: #53b8bb"
+                          >
+                            Add Friends
+                          </button>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <div class="col-md-3">
+                          <img
+                            src="/assets/banner.jpg"
+                            height="125rem"
+                            width="125rem"
+                            style="border-radius: 35%"
+                          />
+                        </div>
+                        <div class="p-2 mx-4">
+                          <h4>Sazokuhle Mlipha</h4>
+                          <span>Graphic Designing Student</span>
+                          <button
+                            class="btn text-light w-100"
+                            style="background-color: #53b8bb"
+                          >
+                            Add Friends
+                          </button>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <div class="col-md-3">
+                          <img
+                            src="/assets/banner.jpg"
+                            height="125rem"
+                            width="125rem"
+                            style="border-radius: 35%"
+                          />
+                        </div>
+                        <div class="p-2 mx-4">
+                          <h4>Sazokuhle Mlipha</h4>
+                          <span>Graphic Designing Student</span>
+                          <button
+                            class="btn text-light w-100"
+                            style="background-color: #53b8bb"
+                          >
+                            Add Friends
+                          </button>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <div class="col-md-3">
+                          <img
+                            src="/assets/banner.jpg"
+                            height="125rem"
+                            width="125rem"
+                            style="border-radius: 35%"
+                          />
+                        </div>
+                        <div class="p-2 mx-4">
+                          <h4>Sazokuhle Mlipha</h4>
+                          <span>Graphic Designing Student</span>
+                          <button
+                            class="btn text-light w-100"
+                            style="background-color: #53b8bb"
+                          >
+                            Add Friends
+                          </button>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <div class="col-md-3">
+                          <img
+                            src="/assets/banner.jpg"
+                            height="125rem"
+                            width="125rem"
+                            style="border-radius: 35%"
+                          />
+                        </div>
+                        <div class="p-2 mx-4">
+                          <h4>Sazokuhle Mlipha</h4>
+                          <span>Graphic Designing Student</span>
+                          <button
+                            class="btn text-light w-100"
+                            style="background-color: #53b8bb"
+                          >
+                            Add Friends
+                          </button>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <div class="col-md-3">
+                          <img
+                            src="/assets/banner.jpg"
+                            height="125rem"
+                            width="125rem"
+                            style="border-radius: 35%"
+                          />
+                        </div>
+                        <div class="p-2 mx-4">
+                          <h4>Sazokuhle Mlipha</h4>
+                          <span>Graphic Designing Student</span>
+                          <button
+                            class="btn text-light w-100"
+                            style="background-color: #53b8bb"
+                          >
+                            Add Friends
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 order-sm-2 order-1 d-flex row gap-5">
+            <!-- Right content goes here -->
+            <div class="container mt-5" style="height: 35rem; width: 90%">
+              <div
+                class="d-flex justify-content-between align-items-center"
+                style="height: 12.6rem; width: 100%; background-color: #f9bc16"
+              >
+                <div
+                  class="d-flex justify-content-center align-items-center gap-4"
+                >
+                  <div class="mt-2">
+                    <img
+                      src="/assets/banner2.jpg "
+                      width="185rem"
+                      height="185rem"
+                      style="border: 5px solid white; border-radius: 50%"
+                    />
+                  </div>
+                  <div><h2 class="text-light">Kgotso Matlhabe</h2></div>
+                </div>
+                <div>
+                  <span class="text-light m-4" style="font-size: 1.5rem"
+                    >2 DAYS</span
+                  >
+                </div>
+              </div>
+              <div style="background-color: #f2f2f2; height: 22rem">
+                <div class="">
+                  <div class="p-4">
+                    <span class=""
+                      >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Modi dignissimos corporis possimus unde ducimus earum
+                      officia iusto deserunt non at accusamus ullam molestiae
+                      sapiente magnam sequi, natus quidem vel laborum numquam,
+                      officiis dolor asperiores dolorum esse. Aspernatur maiores
+                      quasi nulla ducimus adipisci ipsum minus, tenetur vitae
+                      delectus, magni, beatae rem! Nobis pariatur perspiciatis
+                      molestias amet a quam deleniti enim maiores eum quas,
+                      illum, sint rerum, aut porro? Cupiditate expedita nesciunt
+                      repellat animi dolorum, iste cum excepturi alias fugiat?
+                      Iste, soluta totam? Velit quis ab impedit atque distinctio
+                      repudiandae magni nisi culpa pariatur suscipit nam
+                      incidunt provident sit eligendi blanditiis quam nostrum
+                      quidem repellat animi sed aperiam magnam, et minus. Quasi
+                      labore laboriosam nostrum? Harum maiores quibusdam ad
+                      voluptas. Sunt hic perferendis atque iste minus nisi
+                      similique fuga, autem, provide temporibus laudantium
+                      obcaecati expedita id architecto? Mollitia nulla odio aut
+                      neque ratione, porro expedita suscipit est iure unde quas
+                      sapiente iste modi obcaecati reiciendis incidunt accusamus
+                      autem fugit consectetur necessitatibus!</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-around align-items-center"
+                  style="
+                    width: 100%;
+                    height: 8rem;
+                    background-color: #3b3b3b;
+                    border-radius: 0 0 35px 35px;
+                  "
+                >
+                  <div class="icons">
+                    <ul class="d-flex gap-5 mt-2 list-unstyled">
+                      <li>
+                        <i class="fas fa-custom-size fa-bell text-light"></i>
+                      </li>
+                      <li>
+                        <i
+                          class="fas fa-custom-size text-light fa-map-marker-alt"
+                        ></i>
+                      </li>
+                      <li>
+                        <i
+                          class="fas fa-custom-size text-light fa-comment-alt"
+                        ></i>
+                      </li>
+                      <li>
+                        <i class="fas fa-custom-size text-light fa-reply"></i>
+                      </li>
+                      <li>
+                        <i class="fas fa-custom-size text-light fa-random"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="post-btn">
+                    <button
+                      class="btn text-light px-3"
+                      style="background-color: #53b8bb; font-size: 20px"
+                    >
+                      Post
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Container -->
+
+            <div class="container mt-5" style="height: 35rem; width: 90%">
+              <div
+                class="d-flex justify-content-between align-items-center"
+                style="height: 12.6rem; width: 100%; background-color: #f9bc16"
+              >
+                <div
+                  class="d-flex justify-content-center align-items-center gap-4"
+                >
+                  <div class="mt-2">
+                    <img
+                      src="/assets/banner2.jpg "
+                      width="185rem"
+                      height="185rem"
+                      style="border: 5px solid white; border-radius: 50%"
+                    />
+                  </div>
+                  <div><h2 class="text-light">Kgotso Matlhabe</h2></div>
+                </div>
+                <div>
+                  <span class="text-light m-4" style="font-size: 1.5rem"
+                    >2 DAYS</span
+                  >
+                </div>
+              </div>
+              <div style="background-color: #f2f2f2; height: 22rem">
+                <div class="">
+                  <div class="p-4">
+                    <span class=""
+                      >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Modi dignissimos corporis possimus unde ducimus earum
+                      officia iusto deserunt non at accusamus ullam molestiae
+                      sapiente magnam sequi, natus quidem vel laborum numquam,
+                      officiis dolor asperiores dolorum esse. Aspernatur maiores
+                      quasi nulla ducimus adipisci ipsum minus, tenetur vitae
+                      delectus, magni, beatae rem! Nobis pariatur perspiciatis
+                      molestias amet a quam deleniti enim maiores eum quas,
+                      illum, sint rerum, aut porro? Cupiditate expedita nesciunt
+                      repellat animi dolorum, iste cum excepturi alias fugiat?
+                      Iste, soluta totam? Velit quis ab impedit atque distinctio
+                      repudiandae magni nisi culpa pariatur suscipit nam
+                      incidunt provident sit eligendi blanditiis quam nostrum
+                      quidem repellat animi sed aperiam magnam, et minus. Quasi
+                      labore laboriosam nostrum? Harum maiores quibusdam ad
+                      voluptas. Sunt hic perferendis atque iste minus nisi
+                      similique fuga, autem, provide temporibus laudantium
+                      obcaecati expedita id architecto? Mollitia nulla odio aut
+                      neque ratione, porro expedita suscipit est iure unde quas
+                      sapiente iste modi obcaecati reiciendis incidunt accusamus
+                      autem fugit consectetur necessitatibus!</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-around align-items-center"
+                  style="
+                    width: 100%;
+                    height: 8rem;
+                    background-color: #3b3b3b;
+                    border-radius: 0 0 35px 35px;
+                  "
+                >
+                  <div class="icons">
+                    <ul class="d-flex gap-5 mt-2 list-unstyled">
+                      <li>
+                        <i class="fas fa-custom-size fa-bell text-light"></i>
+                      </li>
+                      <li>
+                        <i
+                          class="fas fa-custom-size text-light fa-map-marker-alt"
+                        ></i>
+                      </li>
+                      <li>
+                        <i
+                          class="fas fa-custom-size text-light fa-comment-alt"
+                        ></i>
+                      </li>
+                      <li>
+                        <i class="fas fa-custom-size text-light fa-reply"></i>
+                      </li>
+                      <li>
+                        <i class="fas fa-custom-size text-light fa-random"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Third container -->
+            <div class="container mt-5" style="height: 40rem; width: 90%">
+              <div
+                class="d-flex justify-content-between align-items-center"
+                style="height: 12.6rem; width: 100%; background-color: #f9bc16"
+              >
+                <div
+                  class="d-flex justify-content-center align-items-center gap-4"
+                >
+                  <div class="mt-2">
+                    <img
+                      src="/assets/banner2.jpg "
+                      width="185rem"
+                      height="185rem"
+                      style="border: 5px solid white; border-radius: 50%"
+                    />
+                  </div>
+                  <div><h2 class="text-light">Kgotso Matlhabe</h2></div>
+                </div>
+                <div>
+                  <span class="text-light m-4" style="font-size: 1.5rem"
+                    >2 DAYS</span
+                  >
+                </div>
+              </div>
+              <div style="background-color: #f2f2f2; height: 22rem">
+                <div class="">
+                  <div class="p-4">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th
+                            class="p-4 text-light"
+                            style="background-color: #53b8bb; font-size: 22px"
+                          >
+                            <i
+                              class="fas fa-chart-bar p-2"
+                              style="font-size: 25px"
+                            ></i>
+                            Test
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="bg-dark-subtle">Row 1</td>
+                        </tr>
+                        <tr>
+                          <td>Row 2</td>
+                        </tr>
+                        <tr>
+                          <td class="bg-dark-subtle">Row 3</td>
+                        </tr>
+                        <tr>
+                          <td>Row 4</td>
+                        </tr>
+                        <tr>
+                          <td class="bg-dark-subtle">Row 5</td>
+                        </tr>
+                        <tr>
+                          <td>Row 6</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-around align-items-center"
+                  style="
+                    width: 100%;
+                    height: 8rem;
+                    background-color: #3b3b3b;
+                    border-radius: 0 0 35px 35px;
+                  "
+                >
+                  <div class="icons">
+                    <ul class="d-flex gap-5 mt-2 list-unstyled">
+                      <li>
+                        <i class="fas fa-custom-size fa-bell text-light"></i>
+                      </li>
+                      <li>
+                        <i
+                          class="fas fa-custom-size text-light fa-map-marker-alt"
+                        ></i>
+                      </li>
+                      <li>
+                        <i
+                          class="fas fa-custom-size text-light fa-comment-alt"
+                        ></i>
+                      </li>
+                      <li>
+                        <i class="fas fa-custom-size text-light fa-reply"></i>
+                      </li>
+                      <li>
+                        <i class="fas fa-custom-size text-light fa-random"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- fourth -->
+            <div class="container mt-5" style="height: 35rem; width: 90%">
+              <div
+                class="d-flex justify-content-between align-items-center"
+                style="height: 12.6rem; width: 100%; background-color: #f9bc16"
+              >
+                <div
+                  class="d-flex justify-content-center align-items-center gap-4"
+                >
+                  <div class="mt-2">
+                    <img
+                      src="/assets/banner2.jpg "
+                      width="185rem"
+                      height="185rem"
+                      style="border: 5px solid white; border-radius: 50%"
+                    />
+                  </div>
+                  <div><h2 class="text-light">Kgotso Matlhabe</h2></div>
+                </div>
+                <div>
+                  <span class="text-light m-4" style="font-size: 1.5rem"
+                    >2 DAYS</span
+                  >
+                </div>
+              </div>
+              <div style="background-color: #f2f2f2; height: 22rem">
+                <div class="">
+                  <div class="p-4">
+                    <span class=""
+                      >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Modi dignissimos corporis possimus unde ducimus earum
+                      officia iusto deserunt non at accusamus ullam molestiae
+                      sapiente magnam sequi, natus quidem vel laborum numquam,
+                      officiis dolor asperiores dolorum esse. Aspernatur maiores
+                      quasi nulla ducimus adipisci ipsum minus, tenetur vitae
+                      delectus, magni, beatae rem! Nobis pariatur perspiciatis
+                      molestias amet a quam deleniti enim maiores eum quas,
+                      illum, sint rerum, aut porro? Cupiditate expedita nesciunt
+                      repellat animi dolorum, iste cum excepturi alias fugiat?
+                      Iste, soluta totam? Velit quis ab impedit atque distinctio
+                      repudiandae magni nisi culpa pariatur suscipit nam
+                      incidunt provident sit eligendi blanditiis quam nostrum
+                      quidem repellat animi sed aperiam magnam, et minus. Quasi
+                      labore laboriosam nostrum? Harum maiores quibusdam ad
+                      voluptas. Sunt hic perferendis atque iste minus nisi
+                      similique fuga, autem, provide temporibus laudantium
+                      obcaecati expedita id architecto? Mollitia nulla odio aut
+                      neque ratione, porro expedita suscipit est iure unde quas
+                      sapiente iste modi obcaecati reiciendis incidunt accusamus
+                      autem fugit consectetur necessitatibus!</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-around align-items-center"
+                  style="
+                    width: 100%;
+                    height: 8rem;
+                    background-color: #3b3b3b;
+                    border-radius: 0 0 35px 35px;
+                  "
+                >
+                  <div class="icons">
+                    <ul class="d-flex gap-5 mt-2 list-unstyled">
+                      <li>
+                        <i class="fas fa-custom-size fa-bell text-light"></i>
+                      </li>
+                      <li>
+                        <i
+                          class="fas fa-custom-size text-light fa-map-marker-alt"
+                        ></i>
+                      </li>
+                      <li>
+                        <i
+                          class="fas fa-custom-size text-light fa-comment-alt"
+                        ></i>
+                      </li>
+                      <li>
+                        <i class="fas fa-custom-size text-light fa-reply"></i>
+                      </li>
+                      <li>
+                        <i class="fas fa-custom-size text-light fa-random"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- fifth  -->
+            <div class="container mt-5" style="height: 35rem; width: 90%">
+              <div
+                class="d-flex justify-content-between align-items-center"
+                style="height: 12.6rem; width: 100%; background-color: #f9bc16"
+              >
+                <div
+                  class="d-flex justify-content-center align-items-center gap-4"
+                >
+                  <div class="mt-2">
+                    <img
+                      src="/assets/banner2.jpg "
+                      width="185rem"
+                      height="185rem"
+                      style="border: 5px solid white; border-radius: 50%"
+                    />
+                  </div>
+                  <div><h2 class="text-light">Kgotso Matlhabe</h2></div>
+                </div>
+                <div>
+                  <span class="text-light m-4" style="font-size: 1.5rem"
+                    >2 DAYS</span
+                  >
+                </div>
+              </div>
+              <div style="background-color: #f2f2f2; height: 22rem">
+                <div class="">
+                  <div class="p-4">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th
+                            class="p-4 text-light"
+                            style="background-color: #53b8bb; font-size: 22px"
+                          >
+                            <i
+                              class="fas fa-chart-bar p-2"
+                              style="font-size: 25px"
+                            ></i>
+                            Test
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="bg-dark-subtle">Row 1</td>
+                        </tr>
+                        <tr>
+                          <td>Row 2</td>
+                        </tr>
+                        <tr>
+                          <td class="bg-dark-subtle">Row 3</td>
+                        </tr>
+                        <tr>
+                          <td>Row 4</td>
+                        </tr>
+                        <tr>
+                          <td class="bg-dark-subtle">Row 5</td>
+                        </tr>
+                        <tr>
+                          <td>Row 6</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-around align-items-center"
+                  style="
+                    width: 100%;
+                    height: 8rem;
+                    background-color: #3b3b3b;
+                    border-radius: 0 0 35px 35px;
+                  "
+                >
+                  <div class="icons">
+                    <ul class="d-flex gap-5 mt-2 list-unstyled">
+                      <li>
+                        <i class="fas fa-custom-size fa-bell text-light"></i>
+                      </li>
+                      <li>
+                        <i
+                          class="fas fa-custom-size text-light fa-map-marker-alt"
+                        ></i>
+                      </li>
+                      <li>
+                        <i
+                          class="fas fa-custom-size text-light fa-comment-alt"
+                        ></i>
+                      </li>
+                      <li>
+                        <i class="fas fa-custom-size text-light fa-reply"></i>
+                      </li>
+                      <li>
+                        <i class="fas fa-custom-size text-light fa-random"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Your JavaScript/jQuery code goes here -->
+  </body>
+</html>
