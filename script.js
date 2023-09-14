@@ -1,41 +1,24 @@
 $(document).ready(function () {
   $("#searchIcon").on("click", function () {
-    // Get the search term from the input field
-    var searchTerm = $("#searchInput").val().trim();
-    alert(searchTerm);
+    var searchWord = $("#searchInput").val().trim();
 
-    // Clear previous highlights
-    $("#content").removeHighlight();
+    $(".highlighted").removeClass("highlighted");
 
-    // Check if the search term is not empty
-    if (searchTerm !== "") {
-      // Create a regular expression to match the search term globally and case-insensitively
-      var regex = new RegExp(searchTerm, "gi");
+    if (searchWord !== "") {
+      var regex = new RegExp(searchWord, "gi");
 
-      // Use .html() to get the content of the element
-      var content = $("#content").html();
+      $("#content")
+        .find(":contains('" + searchWord + "')")
+        .each(function () {
+          // Replace the matched text with a span to highlight it
+          var replacedText = $(this)
+            .text()
+            .replace(regex, function (match) {
+              return "<span class='highlighted'>" + match + "</span>";
+            });
 
-      // Use .replace() to wrap all matching words with a span to highlight them
-      var highlightedContent = content.replace(regex, function (match) {
-        return '<span class="highlight">' + match + "</span>";
-      });
-
-      // Update the content with highlighted matches
-      $("#content").html(highlightedContent);
+          $(this).html(replacedText);
+        });
     }
   });
-
-  // Remove highlighting when the input field is changed
-  $("#searchInput").on("input", function () {
-    $("#content").removeHighlight();
-  });
 });
-
-// Extend jQuery to add a removeHighlight() function
-$.fn.removeHighlight = function () {
-  $(this)
-    .find(".highlight")
-    .each(function () {
-      $(this).replaceWith($(this).text());
-    });
-};
